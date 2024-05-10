@@ -15,7 +15,7 @@
                     class="text-gray-100 hover:underline underline-offset-8 uppercase">Github</a>
                 <div class="">
                     <button
-                        class="rounded-full transition-colors bg-blue-600 hover:bg-blue-500 px-4 py-2 text-gray-100 text-md uppercase">Download</button>
+                        class="rounded-full transition-colors bg-blue-600 hover:bg-blue-500 px-6 py-2 text-gray-100 text-md uppercase">Download</button>
                 </div>
             </nav>
         </div>
