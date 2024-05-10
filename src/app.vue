@@ -1,7 +1,7 @@
 <template>
-  <NuxtLayout>
+  <NuxtLayout class="bg-gray-50">
     <AppHeader />
-    <main class="max-w-7xl w-full mx-auto">
+    <main class="wrap">
       <NuxtPage />
     </main>
     <AppFooter />
@@ -12,5 +12,7 @@
 </script>
 
 <style>
-.logo {}
+.wrap {
+  min-height: calc(100vh - 9rem);
+}
 </style>
