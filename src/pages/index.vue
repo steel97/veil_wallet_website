@@ -2,7 +2,7 @@
     <!-- bg-gradient-to-b from-blue-500 to-blue-500 -->
     <div class="text-gray-800 index-wrap">
         <div class="max-w-7xl w-full mx-auto flex justify-between py-[6rem] px-2">
-            <section class="max-w-2xl bg-gray-100 rounded-lg p-8">
+            <section class="max-w-2xl bg-gray-100 rounded-lg px-8 py-7 shadow-lg">
                 <h1 class="leading-10 text-4xl">Veil – Privacy focused cryptocurrency wallet</h1>
                 <p class="leading-normal py-6">
                     Unlock the world of <b>Veil</b>. Make transactions within a convenient app that prioritizes both
@@ -25,6 +25,7 @@
                 </p>
                 <!-- material icons -->
                 <div class="grid grid-cols-3 gap-2 pt-4 text-blue-600">
+                    <!-- ic1 -->
                     <div class="flex flex-col items-center">
                         <img src="/images/icons-2/privacy.svg" width="32" class="text-blue-600">
                         <p class="text-sm pt-2">Privacy-focused</p>
@@ -45,7 +46,8 @@
         </div>
     </div>
     <div class="max-w-7xl w-full mx-auto my-4 text-gray-800">
-        123
+        <!-- download variants -->
+        <!-- donations section-->
     </div>
 </template>
 
@@ -57,7 +59,7 @@ const { isIos, isAndroid, isWindows, isMacOS, isDesktop } = useDevice();
 .index-wrap {
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+    animation: gradient 15s linear infinite;
 }
 
 @keyframes gradient {
