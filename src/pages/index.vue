@@ -1,7 +1,7 @@
 <template>
     <!-- bg-gradient-to-b from-blue-500 to-blue-500 -->
     <div class="text-gray-800 index-wrap">
-        <div class="max-w-7xl w-full mx-auto flex justify-between py-[6rem] px-2">
+        <div class="max-w-7xl w-full mx-auto flex justify-between py-[6rem] px-2 z-10 relative">
             <section class="max-w-2xl bg-gray-100 rounded-lg px-8 py-7 shadow-lg">
                 <h1 class="leading-10 text-4xl">Veil – Privacy focused cryptocurrency wallet</h1>
                 <p class="leading-normal py-6">
@@ -57,10 +57,31 @@ const { isIos, isAndroid, isWindows, isMacOS, isDesktop } = useDevice();
 
 <style>
 .index-wrap {
+    background: url('/images/bg/bg3.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.index-wrap::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+    /* apply the blur */
+    pointer-events: none;
+    z-index: 1;
+    /* make the overlay click-through */
+}
+
+/*.index-wrap {
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     animation: gradient 15s linear infinite;
-}
+}*/
 
 @keyframes gradient {
     0% {
