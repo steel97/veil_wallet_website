@@ -1,0 +1,1 @@
+`public` folder is duplicated due to (possible) `nuxt-seo-experiments` bug (seems like `srcDir` is ignored)

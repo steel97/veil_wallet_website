@@ -27,19 +27,29 @@ export default defineNuxtConfig({
       cookieKey: "locale",
       redirectOn: "all",
       alwaysRedirect: true
+    },
+    baseUrl: process.env.NUXT_I18N_BASE_URL || "https://veilproject.org"
+  },
+  app: {
+    head: {
+      templateParams: {
+        separator: "-"
+      },
+      titleTemplate: "%s %separator %siteName"
     }
   },
+  seo: {
+    redirectToCanonicalSiteUrl: process.env.NODE_ENV !== "development"
+  },
   site: {
-    url: process.env.NUXT_SITE_URL || "https://veilproject.org",
-    name: "Veil Wallet",
-    description: "Veil Wallet - crossplatform veil blockchain wallet"
+    url: process.env.NUXT_PUBLIC_SITE_URL || "https://veilproject.org"
   },
   schemaOrg: {
     identity: {
       type: "Organization",
       name: "Veil Project",
       url: "https://veil-project.com",
-      logo: "https://veilproject.org/images/logo.png"
+      logo: (process.env.NUXT_PUBLIC_SITE_URL || "https://veilproject.org") + "/icon-192x192-light.png"
     }
   },
 
