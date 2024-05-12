@@ -3,12 +3,30 @@
     <div class="text-gray-800 index-wrap">
         <div class="max-w-7xl w-full mx-auto flex justify-between py-[6rem] px-2 z-10 relative">
             <section class="max-w-2xl bg-gray-100 rounded-lg px-8 py-7 shadow-lg">
-                <h1 class="leading-10 text-4xl">Veil – Privacy focused cryptocurrency wallet</h1>
-                <p class="leading-normal py-6">
-                    Unlock the world of <b>Veil</b>. Make transactions within a convenient app that prioritizes both
+                <h1 class="leading-10 text-4xl text-center">Veil – Privacy focused wallet</h1>
+                <p class="leading-normal py-6 pb-8">
+                    Unlock the world of cryptocurrencies with <b>Veil</b>. Make transactions within a convenient app
+                    that prioritizes both
                     security and strict privacy
                 </p>
-                <p>
+                <!-- material icons -->
+                <div class="grid grid-cols-3 gap-2 pb-4 text-blue-600">
+                    <!-- ic1 -->
+                    <div class="flex flex-col items-center">
+                        <img src="/images/icons-2/privacy.svg" width="40" class="text-blue-600">
+                        <p class="text-lg pt-3">Privacy-focused</p>
+                    </div>
+                    <!-- ic2 -->
+                    <div class="flex flex-col items-center">
+                        <img src="/images/icons-2/flutter.svg" width="40">
+                        <p class="text-lg pt-3">Open-source</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="/images/icons-2/secure.svg" width="40">
+                        <p class="text-lg pt-3">Secure</p>
+                    </div>
+                </div>
+                <p class="flex justify-center py-3">
                     <DownloadIos v-if="isIos" />
                     <DownloadAndroid v-else-if="isAndroid" />
                     <DownloadWindows v-else-if="isWindows" />
@@ -16,29 +34,13 @@
                     <DownloadLinux v-else-if="isDesktop" />
                     <DownloadGeneral v-else />
                 </p>
-                <p class="py-6">
+                <p class="flex justify-center py-1">
                     <a href="" class="underline underline-offset-4 hover:text-blue-600 transition-colors">For other
                         platforms</a>
                     <span>&nbsp;/&nbsp;</span>
                     <a href="" class="underline underline-offset-4 hover:text-blue-600 transition-colors">Source
                         code</a>
                 </p>
-                <!-- material icons -->
-                <div class="grid grid-cols-3 gap-2 pt-4 text-blue-600">
-                    <!-- ic1 -->
-                    <div class="flex flex-col items-center">
-                        <img src="/images/icons-2/privacy.svg" width="32" class="text-blue-600">
-                        <p class="text-sm pt-2">Privacy-focused</p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <img src="/images/icons-2/flutter.svg" width="32">
-                        <p class="text-sm pt-2">Open-source</p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <img src="/images/icons-2/secure.svg" width="32">
-                        <p class="text-sm pt-2">Secure</p>
-                    </div>
-                </div>
             </section>
             <section>
                 <img src="/images/promo-2.png" alt="Veil Light wallet" width="500">
