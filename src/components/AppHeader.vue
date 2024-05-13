@@ -14,6 +14,11 @@
                     Website</SiteLink>
                 <SiteLink to="https://veil-project.com"
                     class="text-gray-100 hover:underline underline-offset-8 uppercase" target="_blank">Github</SiteLink>
+                <select
+                    class="w-[100px] border row-start-1 col-start-1 rounded bg-sky-950 border-gray-500 text-gray-100 px-4 py-1 text-sm">
+                    <option>Русский</option>
+                    <option>English</option>
+                </select>
                 <div class="">
                     <button
                         class="rounded-full transition-colors bg-blue-600 hover:bg-blue-500 px-6 py-2 text-gray-100 text-md uppercase">Download</button>
