@@ -2,7 +2,7 @@
     <!-- bg-gradient-to-b from-blue-500 to-blue-500 -->
     <div class="text-gray-800 index-wrap">
         <div class="max-w-7xl w-full mx-auto flex justify-between py-[4.6rem] pb-[5.6rem] px-2 z-10 relative">
-            <section class="max-w-2xl w-full bg-gray-100 rounded-lg px-8 py-7 shadow-lg">
+            <section class="max-w-2xl w-full bg-gray-100 rounded-lg px-8 py-7 shadow-lg min-h-[452px]">
                 <h1 class="leading-10 text-4xl text-center">Donations</h1>
                 <p class="leading-normal py-6 pb-8">
                     12345
@@ -28,10 +28,14 @@
                     <DownloadGeneral />
                 </p>
             </section>
-            <section>
+            <figure>
                 <img src="/images/donate-qr.svg" width="300" alt="Veil address for donations. Thanks in advance :)">
-            </section>
+            </figure>
         </div>
+    </div>
+    <div class="max-w-7xl w-full mx-auto my-4 text-gray-800">
+        <!-- links -->
+        <SectionCrossLinks />
     </div>
 </template>
 
