@@ -6,13 +6,13 @@
                 <span class="text-3xl font-bold text-gray-50">Veil Wallet</span>
             </SiteLink>
             <nav class="flex items-center gap-4">
-                <SiteLink href="https://veil-project.com"
+                <SiteLink :to="localePath('/donations')"
+                    class="text-gray-100 hover:underline underline-offset-8 uppercase">Donations
+                </SiteLink>
+                <SiteLink to="https://veil-project.com"
                     class="text-gray-100 hover:underline underline-offset-8 uppercase" target="_blank">Project
                     Website</SiteLink>
-                <SiteLink href="https://veil-project.com"
-                    class="text-gray-100 hover:underline underline-offset-8 uppercase" target="_blank">Explorer
-                </SiteLink>
-                <SiteLink href="https://veil-project.com"
+                <SiteLink to="https://veil-project.com"
                     class="text-gray-100 hover:underline underline-offset-8 uppercase" target="_blank">Github</SiteLink>
                 <div class="">
                     <button

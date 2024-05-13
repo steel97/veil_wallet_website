@@ -11,7 +11,7 @@
             </template>
         </Head>
 
-        <Body>
+        <Body class="bg-gray-300">
             <slot />
         </Body>
 

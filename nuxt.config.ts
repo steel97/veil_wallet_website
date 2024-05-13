@@ -35,7 +35,7 @@ export default defineNuxtConfig({
       templateParams: {
         separator: "-"
       },
-      titleTemplate: "%s %separator %siteName"
+      titleTemplate: "%siteName %separator %s"
     }
   },
   seo: {
