@@ -8,6 +8,7 @@ export default () => {
         },
         "Crosslinks": {
             "Title": "Полезные ссылки:"
-        }
+        },
+        "CopySuccess": "Скопировано"
     }
 }

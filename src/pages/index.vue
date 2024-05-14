@@ -1,5 +1,4 @@
 <template>
-    <!-- bg-gradient-to-b from-blue-500 to-blue-500 -->
     <div class="text-gray-800 index-wrap">
         <div class="max-w-7xl w-full mx-auto flex justify-between py-[4.6rem] pb-[5.6rem] px-2 z-10 relative">
             <section class="max-w-2xl w-full bg-gray-100 rounded-lg px-8 py-7 shadow-lg min-h-[452px]">
@@ -33,11 +32,12 @@
                     <DownloadGeneral v-else />
                 </p>
                 <p class="flex justify-center pb-1">
-                    <SiteLink href="#2" class="underline underline-offset-4 hover:text-blue-600 transition-colors">{{
-                    t("Index.Downloads.OtherPlatforms") }}</SiteLink>
+                    <a href="#2" class="underline underline-offset-4 hover:text-blue-600 transition-colors">{{
+                    t("Index.Downloads.OtherPlatforms") }}</a>
                     <span>&nbsp;/&nbsp;</span>
-                    <SiteLink href="#1" class="underline underline-offset-4 hover:text-blue-600 transition-colors">{{
-                        t("Index.Downloads.SourceCode") }}</SiteLink>
+                    <a :href="runtimeConfig.public.github"
+                        class="underline underline-offset-4 hover:text-blue-600 transition-colors" target="_blank">{{
+                    t("Index.Downloads.SourceCode") }}</a>
                 </p>
             </section>
             <figure>
@@ -47,16 +47,12 @@
             </figure>
         </div>
     </div>
-    <div class="max-w-7xl w-full mx-auto my-4 text-gray-800">
-        <!-- download variants -->
-        <!-- links -->
-        <SectionCrossLinks />
-    </div>
 </template>
 
 <script setup lang="ts">
 const { isIos, isAndroid, isWindows, isMacOS, isDesktop } = useDevice();
 const { t } = useI18n();
+const runtimeConfig = useRuntimeConfig();
 
 defineSoftwareApp({
     name: "Veil - Privacy focused wallet",

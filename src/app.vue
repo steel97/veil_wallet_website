@@ -2,14 +2,21 @@
   <NuxtLayout>
     <AppHeader />
     <div class="main-wrap" aria-hidden="true"></div>
-    <main class="wrap">
-      <NuxtPage />
-    </main>
+    <div class="wrap">
+      <main>
+        <NuxtPage />
+      </main>
+      <div class="max-w-7xl w-full mx-auto my-4 text-gray-800">
+        <!-- links -->
+        <SectionCrossLinks />
+      </div>
+    </div>
     <AppFooter />
   </NuxtLayout>
 </template>
 
 <script setup lang="ts">
+import "toastify-js/src/toastify.css";
 </script>
 
 <style>

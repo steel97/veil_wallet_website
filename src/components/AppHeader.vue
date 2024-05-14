@@ -9,12 +9,12 @@
                 <SiteLink :to="localePath('/donations')"
                     class="text-gray-100 hover:underline underline-offset-8 uppercase">{{ t("Core.Header.Donations") }}
                 </SiteLink>
-                <SiteLink to="https://veil-project.com"
+                <a :href="runtimeConfig.public.website"
                     class="text-gray-100 hover:underline underline-offset-8 uppercase" target="_blank">{{
-                t("Core.Header.Website") }}</SiteLink>
-                <SiteLink to="https://veil-project.com"
+                t("Core.Header.Website") }}</a>
+                <a :href="runtimeConfig.public.github"
                     class="text-gray-100 hover:underline underline-offset-8 uppercase" target="_blank">{{
-                t("Core.Header.Github") }}</SiteLink>
+                t("Core.Header.Github") }}</a>
                 <select v-model="localeModel"
                     class="w-[100px] border row-start-1 col-start-1 rounded bg-sky-950 border-gray-500 text-gray-100 px-4 py-1 text-sm">
                     <option v-for="loca in getLocales()" :value="loca.code" :selected="locale == loca.code">{{ loca.name
@@ -38,6 +38,7 @@ const { t, locales, locale } = useI18n();
 const switchLocalePath = useSwitchLocalePath();
 const localeModel = ref(locale.value);
 const router = useRouter();
+const runtimeConfig = useRuntimeConfig();
 
 export interface ILocale {
     code: string;

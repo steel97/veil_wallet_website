@@ -3,6 +3,16 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["~/assets/css/tailwind.css", "~/assets/css/common.css"],
   srcDir: "src/",
+  runtimeConfig: {
+    public: {
+      website: "",
+      github: "",
+      app: {
+        googleplay: "",
+        fdroid: ""
+      }
+    }
+  },
   i18n: {
     locales: [
       {
@@ -31,6 +41,7 @@ export default defineNuxtConfig({
     baseUrl: process.env.NUXT_I18N_BASE_URL || "https://veilproject.org"
   },
   app: {
+    pageTransition: { name: "page", mode: "out-in" },
     head: {
       templateParams: {
         separator: "-"
