@@ -10,7 +10,15 @@ export default () => {
         },
         "Downloads": {
             "OtherPlatforms": "For other platforms",
-            "SourceCode": "Source code"
+            "SourceCode": "Source code",
+            "Widget": {
+                "Windows": "Download for Windows",
+                "MacOS": "Download for MacOS",
+                "Linux": "Download for Linux",
+                "IOS": "Download for iOS",
+                "Android": "Download for Android",
+                "General": "Download"
+            }
         }
     }
 }

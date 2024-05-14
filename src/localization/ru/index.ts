@@ -10,7 +10,15 @@ export default () => {
         },
         "Downloads": {
             "OtherPlatforms": "Для других платформ",
-            "SourceCode": "Исходный код"
+            "SourceCode": "Исходный код",
+            "Widget": {
+                "Windows": "Скачать для Windows",
+                "MacOS": "Скачать для MacOS",
+                "Linux": "Скачать для Linux",
+                "IOS": "Скачать для iOS",
+                "Android": "Скачать для Android",
+                "General": "Скачать"
+            }
         }
     }
 }
