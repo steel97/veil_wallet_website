@@ -9,6 +9,7 @@ export default () => {
             "Secure": "Безопасность"
         },
         "Downloads": {
+            "Header": "Скачать кошелек",
             "OtherPlatforms": "Для других платформ",
             "SourceCode": "Исходный код",
             "Widget": {

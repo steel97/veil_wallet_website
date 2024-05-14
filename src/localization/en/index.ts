@@ -9,6 +9,7 @@ export default () => {
             "Secure": "Secure"
         },
         "Downloads": {
+            "Header": "Downloads",
             "OtherPlatforms": "For other platforms",
             "SourceCode": "Source code",
             "Widget": {

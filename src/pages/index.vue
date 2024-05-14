@@ -46,6 +46,12 @@
                     width="500">
             </figure>
         </div>
+        <section class="max-w-7xl w-full mx-auto relative mt-10">
+            <h1 class="leading-10 text-3xl pb-4">{{ t("Index.Downloads.Header") }}</h1>
+            <p>
+                <SectionDownloadIOS />
+            </p>
+        </section>
     </div>
 </template>
 
