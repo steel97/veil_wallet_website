@@ -1,5 +1,13 @@
 export default () => {
     return {
-        "NoData": "unknown",
+        "Header": {
+            "Donations": "Donations",
+            "Website": "Project website",
+            "Github": "Github",
+            "Download": "Download"
+        },
+        "Crosslinks": {
+            "Title": "Useful links:"
+        }
     }
 }

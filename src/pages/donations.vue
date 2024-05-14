@@ -3,29 +3,31 @@
     <div class="text-gray-800 index-wrap">
         <div class="max-w-7xl w-full mx-auto flex justify-between py-[4.6rem] pb-[5.6rem] px-2 z-10 relative">
             <section class="max-w-2xl w-full bg-gray-100 rounded-lg px-8 py-7 shadow-lg min-h-[452px]">
-                <h1 class="leading-10 text-4xl text-center">Donations</h1>
-                <p class="leading-normal py-6 pb-8">
-                    12345
+                <h1 class="leading-10 text-4xl text-center">{{ t("Donations.Header") }}</h1>
+                <p class="leading-normal pt-6 pb-4">
+                    {{ t("Donations.Texts.Text1") }}
                 </p>
-                <!-- material icons -->
-                <div class="grid grid-cols-3 gap-2 pb-5 pt-1 text-blue-600">
-                    <!-- ic1 -->
-                    <figure class="flex flex-col items-center">
-                        <img src="/images/icons-2/privacy.svg" width="40" class="text-blue-600" alt="Privacy-focused">
-                        <figcaption class="text-lg pt-3">Privacy-focused</figcaption>
-                    </figure>
-                    <!-- ic2 -->
-                    <figure class="flex flex-col items-center">
-                        <img src="/images/icons-2/flutter.svg" width="40" alt="Open-source">
-                        <figcaption class="text-lg pt-3">Open-source</figcaption>
-                    </figure>
-                    <figure class="flex flex-col items-center">
-                        <img src="/images/icons-2/secure.svg" width="40" alt="Secure">
-                        <figcaption class="text-lg pt-3">Secure</figcaption>
-                    </figure>
+                <p class="leading-normal pb-4">
+                    {{ t("Donations.Texts.Text2") }}
+                </p>
+                <p class="leading-normal pb-4">
+                    {{ t("Donations.Texts.Text3") }}
+                </p>
+                <p class="leading-normal pb-4">
+                    {{ t("Donations.Texts.Text4") }}
+                </p>
+                <p class="bg-gray-200 rounded-lg p-3 text-xs break-all">
+                    {{ donationsAddress }}
+                <div class="text-center">
+                    <a to="#" @click="copyAddress"
+                        class="underline break-all text-blue-500 font-bold underline-offset-4">{{ t("Donations.Copy") }}
+                    </a>
                 </div>
-                <p class="flex justify-center py-3">
-                    <DownloadGeneral />
+                </p>
+                <p class="py-3">
+                    <a class="underline break-all text-blue-500 underline-offset-4" :href="'veil:' + donationsAddress">
+                        veil:{{ donationsAddress }}
+                    </a>
                 </p>
             </section>
             <figure>
@@ -41,9 +43,14 @@
 
 <script setup lang="ts">
 const { t } = useI18n();
+const donationsAddress = ref("sv1qqp3twtj249e226mvg55jm0ec36y99xsh5ytnm6hcgvetthuptj2kugpqwcnw6tpnvwrrvutsltnghkg46ayqpw40g6p3knppy3kwgvhr34mkqqqeedkfp");
 
 useHead({
     title: t("Donations.Title")
 });
+
+const copyAddress = () => {
+
+};
 
 </script>

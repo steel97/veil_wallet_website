@@ -1,6 +1,6 @@
 <template>
     <section class="flex flex-col justify-center items-center mb-10">
-        <h1 class="w-fit leading-10 text-2xl my-4 font-bold">Useful links:</h1>
+        <h1 class="w-fit leading-10 text-2xl my-4 font-bold">{{ t("Core.Crosslinks.Title") }}</h1>
         <div class="flex flex-wrap justify-center gap-10 w-fit">
             <figure class="flex justify-center items-center h-20 relative">
                 <div aria-hidden="true" class="absolute left-0 z-0 w-20 h-20 bg-gray-100 rounded-lg"></div>
@@ -24,4 +24,6 @@
     </section>
 </template>
 
-<style></style>
+<script setup lang="ts">
+const { t } = useI18n();
+</script>

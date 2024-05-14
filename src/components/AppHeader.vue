@@ -7,21 +7,23 @@
             </SiteLink>
             <nav class="flex items-center gap-4">
                 <SiteLink :to="localePath('/donations')"
-                    class="text-gray-100 hover:underline underline-offset-8 uppercase">Donations
+                    class="text-gray-100 hover:underline underline-offset-8 uppercase">{{ t("Core.Header.Donations") }}
                 </SiteLink>
                 <SiteLink to="https://veil-project.com"
-                    class="text-gray-100 hover:underline underline-offset-8 uppercase" target="_blank">Project
-                    Website</SiteLink>
+                    class="text-gray-100 hover:underline underline-offset-8 uppercase" target="_blank">{{
+                t("Core.Header.Website") }}</SiteLink>
                 <SiteLink to="https://veil-project.com"
-                    class="text-gray-100 hover:underline underline-offset-8 uppercase" target="_blank">Github</SiteLink>
-                <select
+                    class="text-gray-100 hover:underline underline-offset-8 uppercase" target="_blank">{{
+                t("Core.Header.Github") }}</SiteLink>
+                <select v-model="localeModel"
                     class="w-[100px] border row-start-1 col-start-1 rounded bg-sky-950 border-gray-500 text-gray-100 px-4 py-1 text-sm">
-                    <option>Русский</option>
-                    <option>English</option>
+                    <option v-for="loca in getLocales()" :value="loca.code" :selected="locale == loca.code">{{ loca.name
+                        }}</option>
                 </select>
                 <div class="">
                     <button
-                        class="rounded-full transition-colors bg-blue-600 hover:bg-blue-500 px-6 py-2 text-gray-100 text-md uppercase">Download</button>
+                        class="rounded-full transition-colors bg-blue-600 hover:bg-blue-500 px-6 py-2 text-gray-100 text-md uppercase min-w-[145px]">{{
+                t("Core.Header.Download") }}</button>
                 </div>
             </nav>
         </div>
@@ -29,5 +31,33 @@
 </template>
 
 <script setup lang="ts">
+import type { LocaleObject } from "@nuxtjs/i18n";
+
 const localePath = useLocalePath();
+const { t, locales, locale } = useI18n();
+const switchLocalePath = useSwitchLocalePath();
+const localeModel = ref(locale.value);
+const router = useRouter();
+
+export interface ILocale {
+    code: string;
+    name: string;
+}
+
+watch(localeModel, nval => {
+    router.push(switchLocalePath(nval));
+});
+
+const getLocales = () => {
+    const localesRet: Array<ILocale> = [];
+    locales.value.forEach(locale => {
+        const lang = locale as LocaleObject;
+        const link: ILocale = {
+            code: lang.code,
+            name: lang.name ?? ""
+        };
+        localesRet.push(link);
+    });
+    return localesRet;
+};
 </script>

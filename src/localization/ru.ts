@@ -1,5 +1,6 @@
 import Core from "./ru/core";
 import Index from "./ru/index";
+import Donations from "./ru/donations";
 
 export default defineI18nLocale(async (locale) => {
     return {
@@ -9,5 +10,6 @@ export default defineI18nLocale(async (locale) => {
         },
         Core: Core(),
         Index: Index(),
+        Donations: Donations()
     }
 });

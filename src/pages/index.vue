@@ -3,27 +3,25 @@
     <div class="text-gray-800 index-wrap">
         <div class="max-w-7xl w-full mx-auto flex justify-between py-[4.6rem] pb-[5.6rem] px-2 z-10 relative">
             <section class="max-w-2xl w-full bg-gray-100 rounded-lg px-8 py-7 shadow-lg min-h-[452px]">
-                <h1 class="leading-10 text-4xl text-center">Veil – Privacy focused wallet</h1>
+                <h1 class="leading-10 text-4xl text-center">{{ t("Index.Header") }}</h1>
                 <p class="leading-normal py-6 pb-8">
-                    Unlock the world of cryptocurrencies with Veil. Make transactions within a convenient app
-                    that prioritizes both
-                    security and strict privacy
+                    {{ t("Index.Text") }}
                 </p>
                 <!-- material icons -->
                 <div class="grid grid-cols-3 gap-2 pb-5 pt-1 text-blue-600">
                     <!-- ic1 -->
                     <figure class="flex flex-col items-center">
                         <img src="/images/icons-2/privacy.svg" width="40" class="text-blue-600" alt="Privacy-focused">
-                        <figcaption class="text-lg pt-3">Privacy-focused</figcaption>
+                        <figcaption class="text-lg pt-3">{{ t("Index.Advantages.Privacy") }}</figcaption>
                     </figure>
                     <!-- ic2 -->
                     <figure class="flex flex-col items-center">
                         <img src="/images/icons-2/flutter.svg" width="40" alt="Open-source">
-                        <figcaption class="text-lg pt-3">Open-source</figcaption>
+                        <figcaption class="text-lg pt-3">{{ t("Index.Advantages.OpenSource") }}</figcaption>
                     </figure>
                     <figure class="flex flex-col items-center">
                         <img src="/images/icons-2/secure.svg" width="40" alt="Secure">
-                        <figcaption class="text-lg pt-3">Secure</figcaption>
+                        <figcaption class="text-lg pt-3">{{ t("Index.Advantages.Secure") }}</figcaption>
                     </figure>
                 </div>
                 <p class="flex justify-center py-3">
@@ -35,13 +33,11 @@
                     <DownloadGeneral v-else />
                 </p>
                 <p class="flex justify-center pb-1">
-                    <SiteLink href="#2" class="underline underline-offset-4 hover:text-blue-600 transition-colors">For
-                        other
-                        platforms</SiteLink>
+                    <SiteLink href="#2" class="underline underline-offset-4 hover:text-blue-600 transition-colors">{{
+                    t("Index.Downloads.OtherPlatforms") }}</SiteLink>
                     <span>&nbsp;/&nbsp;</span>
-                    <SiteLink href="#1" class="underline underline-offset-4 hover:text-blue-600 transition-colors">
-                        Source
-                        code</SiteLink>
+                    <SiteLink href="#1" class="underline underline-offset-4 hover:text-blue-600 transition-colors">{{
+                        t("Index.Downloads.SourceCode") }}</SiteLink>
                 </p>
             </section>
             <figure>
