@@ -73,5 +73,5 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ["@nuxtjs/device", "@nuxtjs/i18n", "@nuxtjs/seo"]
+  modules: ["@nuxtjs/device", "@nuxtjs/i18n", "@nuxtjs/seo", "nuxt-multi-cache"]
 })
