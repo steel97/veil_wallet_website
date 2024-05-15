@@ -20,6 +20,8 @@ export default () => {
                 "Android": "Download for Android",
                 "General": "Download"
             },
+            "ActualVersion": "Actual version: {version}",
+            "AutoUpdatesNotice": "* this version does not support auto-updates, please check the version on the website or github periodically",
             "Sections": {
                 "iOS": {
                     "Header": "Download for iOS",
@@ -28,6 +30,28 @@ export default () => {
                     "ActionAddToAltstore": "Add to AltStore",
                     "ActionDownloadIPA": "Download .ipa package",
                     "ActionAltStoreGuide": "How to install AltStore"
+                },
+                "Android": {
+                    "Header": "Download for Android",
+                    "Text": "App available in Google Play and F-Droid.",
+                    "ActionDownloadGooglePlay": "Google Play",
+                    "ActionDownloadFDroid": "F-Droid",
+                    "TextDownloadAPK": "Download APK:"
+                },
+                "Windows": {
+                    "Header": "Download for Windows",
+                    "Text": "To install the wallet, please download and unzip the archive. Run the veil_wallet.exe",
+                    "ActionDownload": "Download .zip"
+                },
+                "MacOS": {
+                    "Header": "Download for MacOS",
+                    "Text": "The wallet build is universal, suitable for both x86 and arm devices (Apple M)",
+                    "ActionDownload": "Download .zip",
+                },
+                "Linux": {
+                    "Header": "Download for Linux",
+                    "Text": "The wallet build was tested on the latest LTS version of Ubuntu (24.04)",
+                    "ActionDownload": "Download .zip",
                 }
             }
         }

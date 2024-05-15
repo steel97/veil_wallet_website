@@ -48,9 +48,16 @@
             </figure>
         </div>
         <section class="max-w-7xl w-full mx-auto relative mt-10" id="downloads">
-            <h1 class="leading-10 text-3xl pb-4">{{ t("Index.Downloads.Header") }}</h1>
-            <p class="grid grid-cols-3 gap-2">
-                <SectionDownloadIOS />
+            <h1 class="leading-10 text-3xl">{{ t("Index.Downloads.Header") }}</h1>
+            <p class="leading-10 text-sm pb-4 pl-1">{{ t("Index.Downloads.ActualVersion", { version: "1.0.20" }) }}</p>
+            <p class="grid grid-cols-2 gap-6">
+                <SectionDownloadIos />
+                <SectionDownloadAndroid />
+            </p>
+            <p class="grid grid-cols-3 gap-6 mt-6">
+                <SectionDownloadWindows />
+                <SectionDownloadMacOS />
+                <SectionDownloadLinux />
             </p>
         </section>
     </div>
