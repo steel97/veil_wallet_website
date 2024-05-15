@@ -16,7 +16,7 @@
                     class="absolute left-[0.75rem] top-[0.75rem] z-10 w-14 h-14">
                 <span class="text-lg font-bold ml-[6rem]">F-Droid</span>
             </SiteLink>
-            <SiteLink :href="runtimeConfig.public.github" class="flex justify-center items-center h-20 relative"
+            <SiteLink :href="runtimeConfig.public.github.wallet" class="flex justify-center items-center h-20 relative"
                 target="_blank">
                 <div aria-hidden="true" class="absolute left-0 z-0 w-20 h-20 bg-gray-100 rounded-lg"></div>
                 <img src="/images/icons/services/github.svg" alt="Secure"

@@ -36,7 +36,7 @@
                         class="underline underline-offset-4 hover:text-blue-600 transition-colors">{{
                     t("Index.Downloads.OtherPlatforms") }}</SiteLink>
                     <span>&nbsp;/&nbsp;</span>
-                    <SiteLink :href="runtimeConfig.public.github"
+                    <SiteLink :href="runtimeConfig.public.github.wallet"
                         class="underline underline-offset-4 hover:text-blue-600 transition-colors" target="_blank">{{
                     t("Index.Downloads.SourceCode") }}</SiteLink>
                 </p>

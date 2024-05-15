@@ -6,7 +6,10 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       website: "",
-      github: "",
+      github: {
+        site: "",
+        wallet: ""
+      },
       site: {
         url: "http://localhost:3000"
       },

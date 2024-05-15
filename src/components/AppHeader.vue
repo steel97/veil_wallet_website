@@ -12,7 +12,7 @@
                 <SiteLink :href="runtimeConfig.public.website"
                     class="text-gray-100 hover:underline underline-offset-8 uppercase" target="_blank">{{
                 t("Core.Header.Website") }}</SiteLink>
-                <SiteLink :href="runtimeConfig.public.github"
+                <SiteLink :href="runtimeConfig.public.github.site"
                     class="text-gray-100 hover:underline underline-offset-8 uppercase" target="_blank">{{
                 t("Core.Header.Github") }}</SiteLink>
                 <select v-model="localeModel"
