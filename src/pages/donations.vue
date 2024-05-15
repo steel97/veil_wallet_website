@@ -18,19 +18,20 @@
                 <p class="bg-gray-200 rounded-lg p-3 text-xs break-all">
                     <span id="donations-address">{{ donationsAddress }}</span>
                 <div class="text-center">
-                    <a href="#" @click="copyAddress"
+                    <SiteLink href="#" @click="copyAddress"
                         class="underline break-all text-blue-500 font-bold underline-offset-4">{{ t("Donations.Copy") }}
-                    </a>
+                    </SiteLink>
                 </div>
                 </p>
                 <p class="py-3">
-                    <a class="underline break-all text-blue-500 underline-offset-4" :href="'veil:' + donationsAddress">
+                    <SiteLink class="underline break-all text-blue-500 underline-offset-4"
+                        :href="'veil:' + donationsAddress">
                         veil:{{ donationsAddress }}
-                    </a>
+                    </SiteLink>
                 </p>
             </section>
             <figure>
-                <img src="/images/donate-qr.svg" width="300" alt="Veil address for donations. Thanks in advance :)">
+                <img src="/images/qr/donate.svg" width="300" alt="Veil address for donations. Thanks in advance :)">
             </figure>
         </div>
     </div>

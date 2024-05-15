@@ -7,6 +7,9 @@ export default defineNuxtConfig({
     public: {
       website: "",
       github: "",
+      site: {
+        url: "http://localhost:3000"
+      },
       app: {
         googleplay: "",
         fdroid: ""

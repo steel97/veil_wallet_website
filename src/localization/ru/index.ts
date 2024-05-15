@@ -19,6 +19,16 @@ export default () => {
                 "IOS": "Скачать для iOS",
                 "Android": "Скачать для Android",
                 "General": "Скачать"
+            },
+            "Sections": {
+                "iOS": {
+                    "Header": "Скачать для iOS",
+                    "Text": "Используя Altstore, SideStore или другие альтернативные магазины.",
+                    "NoJailbreak": "Jailbreak не требуется!",
+                    "ActionAddToAltstore": "Добавить в AltStore",
+                    "ActionDownloadIPA": "Скачать .ipa пакет",
+                    "ActionAltStoreGuide": "Как установить AltStore"
+                }
             }
         }
     }

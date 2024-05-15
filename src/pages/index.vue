@@ -32,12 +32,13 @@
                     <DownloadGeneral v-else />
                 </p>
                 <p class="flex justify-center pb-1">
-                    <a href="#2" class="underline underline-offset-4 hover:text-blue-600 transition-colors">{{
-                    t("Index.Downloads.OtherPlatforms") }}</a>
+                    <SiteLink href="#downloads"
+                        class="underline underline-offset-4 hover:text-blue-600 transition-colors">{{
+                    t("Index.Downloads.OtherPlatforms") }}</SiteLink>
                     <span>&nbsp;/&nbsp;</span>
-                    <a :href="runtimeConfig.public.github"
+                    <SiteLink :href="runtimeConfig.public.github"
                         class="underline underline-offset-4 hover:text-blue-600 transition-colors" target="_blank">{{
-                    t("Index.Downloads.SourceCode") }}</a>
+                    t("Index.Downloads.SourceCode") }}</SiteLink>
                 </p>
             </section>
             <figure>
@@ -46,9 +47,9 @@
                     width="500">
             </figure>
         </div>
-        <section class="max-w-7xl w-full mx-auto relative mt-10">
+        <section class="max-w-7xl w-full mx-auto relative mt-10" id="downloads">
             <h1 class="leading-10 text-3xl pb-4">{{ t("Index.Downloads.Header") }}</h1>
-            <p>
+            <p class="grid grid-cols-3 gap-2">
                 <SectionDownloadIOS />
             </p>
         </section>

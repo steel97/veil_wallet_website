@@ -19,6 +19,16 @@ export default () => {
                 "IOS": "Download for iOS",
                 "Android": "Download for Android",
                 "General": "Download"
+            },
+            "Sections": {
+                "iOS": {
+                    "Header": "Download for iOS",
+                    "Text": "Using Altstore, SideStore or with another alternative store.",
+                    "NoJailbreak": "Jailbreak is not required!",
+                    "ActionAddToAltstore": "Add to AltStore",
+                    "ActionDownloadIPA": "Download .ipa package",
+                    "ActionAltStoreGuide": "How to install AltStore"
+                }
             }
         }
     }
