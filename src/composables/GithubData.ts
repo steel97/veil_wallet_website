@@ -8,12 +8,12 @@ export const useGithubData = () => {
             return value;
         }
 
-        const { data } = await useFetch<GithubRelease[]>("/api/github/releases");
-        if (data.value != null) {
-            addToCache(data.value, undefined, 3600);
+        const data = await $fetch<GithubRelease[]>("/api/github/releases");
+        if (data != null) {
+            addToCache(data, undefined, 3600);
         }
 
-        return data.value;
+        return data;
     };
 
     const getLatestRelease = async () => {

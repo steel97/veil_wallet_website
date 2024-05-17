@@ -11,8 +11,8 @@ export interface GithubRelease {
     name: string;
     draft: boolean;
     prerelease: boolean;
-    created_at: Date;
-    published_at: Date;
+    created_at: string;// format 2024-04-20T16:41:35Z
+    published_at: string;// format 2024-04-20T16:41:35Z
     assets: Asset[];
     tarball_url: string;
     zipball_url: string;
@@ -31,8 +31,8 @@ export interface Asset {
     state: string;
     size: number;
     download_count: number;
-    created_at: Date;
-    updated_at: Date;
+    created_at: string;// format 2024-04-20T16:41:35Z
+    updated_at: string;// format 2024-04-20T16:41:35Z
     browser_download_url: string;
 }
 

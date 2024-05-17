@@ -2,6 +2,10 @@
 interface AltSourceDef {
     // The name of your source as it will appear in AltStore.
     name: string,
+    // unk: example: com.quarksources.quantumsource
+    identifier: string,
+    // unk: api version, v2 currently
+    apiVersion: string,
     // A short, one-sentence description of your source. This will appear underneath the source's name on its About page.
     subtitle?: string,
     // A full-length description of your source. This can include any information you believe is relevant for your source, such as information about your apps or additional links.
@@ -30,4 +34,5 @@ interface AltSourceDef {
     // A list of the News items in your source. The ordering does not matter because AltStore will display them in reverse chronological order according to their date. 
     // see https://faq.altstore.io/distribute-your-apps/make-a-source#news-items
     news: AltSourceNews[],
+    userInfo: {}
 }

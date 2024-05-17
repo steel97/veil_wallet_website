@@ -7,6 +7,10 @@ export default defineNuxtConfig({
     github: {
       repo: ""
     },
+    altsource: {
+      name: "",
+      identifier: ""
+    },
     public: {
       website: "",
       github: {
