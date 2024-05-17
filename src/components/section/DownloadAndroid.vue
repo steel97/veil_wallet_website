@@ -27,19 +27,19 @@
                 </div>
                 <p class="mt-4">
                     <span class="block">{{ t("Index.Downloads.Sections.Android.TextDownloadAPK") }}</span>
-                    <SiteLink href="https://google.com"
+                    <SiteLink :href="asset_universal?.browser_download_url"
                         class="underline underline-offset-4 hover:text-blue-600 transition-colors">
                         universal
                     </SiteLink> /
-                    <SiteLink href="https://google.com"
+                    <SiteLink :href="asset_arm64_v8a?.browser_download_url"
                         class="underline underline-offset-4 hover:text-blue-600 transition-colors">
                         arm64-v8a
                     </SiteLink> /
-                    <SiteLink href="https://google.com"
+                    <SiteLink :href="asset_armeabi_v7a?.browser_download_url"
                         class="underline underline-offset-4 hover:text-blue-600 transition-colors">
                         armeabi-v7a
                     </SiteLink> /
-                    <SiteLink href="https://google.com"
+                    <SiteLink :href="asset_x86_64?.browser_download_url"
                         class="underline underline-offset-4 hover:text-blue-600 transition-colors">
                         x86_64
                     </SiteLink>
@@ -51,6 +51,17 @@
 </template>
 
 <script setup lang="ts">
+import type { GithubRelease } from "~/models/github/GithubReleases";
+
 const { t } = useI18n();
 const runtimeConfig = useRuntimeConfig();
+const { getAsset } = useGithubData();
+const props = defineProps<{
+    release: GithubRelease | null
+}>();
+
+const asset_universal = computed(() => getAsset(props.release, ".android.apk"));
+const asset_arm64_v8a = computed(() => getAsset(props.release, ".android-arm64-v8a.apk"));
+const asset_armeabi_v7a = computed(() => getAsset(props.release, ".android-armeabi-v7a.apk"));
+const asset_x86_64 = computed(() => getAsset(props.release, ".android-x86_64.apk"));
 </script>

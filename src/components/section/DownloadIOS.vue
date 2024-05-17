@@ -20,7 +20,7 @@
                     </div>
                 </div>
                 <p class="mt-4">
-                    <SiteLink href="https://google.com"
+                    <SiteLink :href="asset?.browser_download_url"
                         class="underline underline-offset-4 hover:text-blue-600 transition-colors">
                         {{ t("Index.Downloads.Sections.iOS.ActionDownloadIPA") }}
                     </SiteLink>
@@ -38,6 +38,15 @@
 </template>
 
 <script setup lang="ts">
+import type { GithubRelease } from "~/models/github/GithubReleases";
+
 const { t } = useI18n();
 const runtimeConfig = useRuntimeConfig();
+const { getAsset } = useGithubData();
+const props = defineProps<{
+    release: GithubRelease | null
+}>();
+
+
+const asset = computed(() => getAsset(props.release, ".ipa"));
 </script>

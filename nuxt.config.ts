@@ -4,6 +4,9 @@ export default defineNuxtConfig({
   css: ["~/assets/css/tailwind.css", "~/assets/css/common.css"],
   srcDir: "src/",
   runtimeConfig: {
+    github: {
+      repo: ""
+    },
     public: {
       website: "",
       github: {

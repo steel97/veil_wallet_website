@@ -49,15 +49,18 @@
         </div>
         <section class="max-w-7xl w-full mx-auto relative mt-10" id="downloads">
             <h1 class="leading-10 text-3xl">{{ t("Index.Downloads.Header") }}</h1>
-            <p class="leading-10 text-sm pb-4 pl-1">{{ t("Index.Downloads.ActualVersion", { version: "1.0.20" }) }}</p>
+            <p class="leading-10 text-sm pb-4 pl-1">{{ t("Index.Downloads.ActualVersion", {
+                    version:
+                        releaseData?.tag_name
+                }) }}</p>
             <p class="grid grid-cols-2 gap-6">
-                <SectionDownloadIos />
-                <SectionDownloadAndroid />
+                <SectionDownloadIos :release="releaseData" />
+                <SectionDownloadAndroid :release="releaseData" />
             </p>
             <p class="grid grid-cols-3 gap-6 mt-6">
-                <SectionDownloadWindows />
-                <SectionDownloadMacOS />
-                <SectionDownloadLinux />
+                <SectionDownloadWindows :release="releaseData" />
+                <SectionDownloadMacOS :release="releaseData" />
+                <SectionDownloadLinux :release="releaseData" />
             </p>
         </section>
     </div>
@@ -67,6 +70,9 @@
 const { isIos, isAndroid, isWindows, isMacOS, isDesktop } = useDevice();
 const { t } = useI18n();
 const runtimeConfig = useRuntimeConfig();
+const { getLatestRelease } = useGithubData();
+
+const releaseData = ref(await getLatestRelease());
 
 defineSoftwareApp({
     name: "Veil - Privacy focused wallet",
