@@ -45,7 +45,11 @@
                     </SiteLink>
                 </p>
             </div>
-            <img src="/images/qr/google-play.svg" alt="AltStore QR" width="128" class="relative top-[-20px]">
+            <img src="/images/qr/google-play.svg" alt="AltStore QR" width="128"
+                class="hidden lg:block relative top-[-20px]">
+        </section>
+        <section class="block lg:hidden mt-2">
+            <img src="/images/qr/google-play.svg" alt="AltStore QR" width="128" class="relative lg:top-[-20px]">
         </section>
     </section>
 </template>

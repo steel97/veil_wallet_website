@@ -53,11 +53,11 @@
                     version:
                         releaseData?.tag_name
                 }) }}</p>
-            <p class="grid grid-cols-2 gap-6">
+            <p class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <SectionDownloadIos :release="releaseData" />
                 <SectionDownloadAndroid :release="releaseData" />
             </p>
-            <p class="grid grid-cols-3 gap-6 mt-6">
+            <p class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
                 <SectionDownloadWindows :release="releaseData" />
                 <SectionDownloadMacOS :release="releaseData" />
                 <SectionDownloadLinux :release="releaseData" />

@@ -32,7 +32,11 @@
                     </SiteLink>
                 </p>
             </div>
-            <img src="/images/qr/altstore-source.svg" alt="AltStore QR" width="128" class="relative top-[-5px]">
+            <img src="/images/qr/altstore-source.svg" alt="AltStore QR" width="128"
+                class="hidden lg:block relative top-[-5px]">
+        </section>
+        <section class="block lg:hidden mt-2">
+            <img src="/images/qr/altstore-source.svg" alt="AltStore QR" width="128" class="relative lg:top-[-5px]">
         </section>
     </section>
 </template>
