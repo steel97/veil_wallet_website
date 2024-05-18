@@ -49,8 +49,8 @@
             </figure>
         </div>
         <section class="max-w-7xl w-full mx-auto relative mt-10" id="downloads">
-            <h1 class="leading-10 text-3xl">{{ t("Index.Downloads.Header") }}</h1>
-            <p class="leading-10 text-sm pb-4 pl-1">{{ t("Index.Downloads.ActualVersion", {
+            <h1 class="leading-10 text-3xl text-gray-100">{{ t("Index.Downloads.Header") }}</h1>
+            <p class="leading-10 text-sm pb-4 pl-1 text-gray-100">{{ t("Index.Downloads.ActualVersion", {
                     version:
                         releaseData?.tag_name
                 }) }}</p>

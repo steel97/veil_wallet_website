@@ -30,6 +30,18 @@ const props = defineProps({
 }
 
 .main-wrap {
+    background: url('/images/bg/bg1.png');
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100lvh;
+    z-index: -2;
+}
+
+.main-wrap-or {
     background: url('/images/bg/bg3.png');
     background-size: cover;
     background-position: center;
