@@ -20,10 +20,6 @@ import "toastify-js/src/toastify.css";
 </script>
 
 <style>
-.wrap {
-  min-height: calc(100vh - 9rem);
-}
-
 .main-wrap {
   background: url('/images/bg/bg1.png');
   background-size: cover;
@@ -31,8 +27,7 @@ import "toastify-js/src/toastify.css";
   position: fixed;
   top: 0;
   width: 100%;
-  height: 100vh;
-  height: 100lvh;
+  height: 100%;
   z-index: -2;
 }
 

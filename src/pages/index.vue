@@ -1,7 +1,6 @@
 <template>
     <div class="text-gray-800 index-wrap">
-        <div
-            class="lg:max-w-7xl w-full mx-auto flex justify-between py-4 lg:py-[4.6rem] pb-[5.6rem] px-2 z-10 relative">
+        <div class="lg:max-w-7xl w-full mx-auto flex justify-between py-4 lg:py-[4.6rem] pb-4 px-2 z-10 relative">
             <section class="lg:max-w-2xl w-full bg-gray-100 rounded-lg px-8 py-7 shadow-lg min-h-[452px]">
                 <h1 class="leading-10 text-4xl text-center">{{ t("Index.Header") }}</h1>
                 <p class="leading-normal py-6 pb-8">
@@ -48,7 +47,7 @@
                     width="500">
             </figure>
         </div>
-        <section class="max-w-7xl w-full mx-auto relative mt-10" id="downloads">
+        <section class="max-w-7xl w-full mx-auto relative px-2" id="downloads">
             <h1 class="leading-10 text-3xl text-gray-100">{{ t("Index.Downloads.Header") }}</h1>
             <p class="leading-10 text-sm pb-4 pl-1 text-gray-100">{{ t("Index.Downloads.ActualVersion", {
                     version:

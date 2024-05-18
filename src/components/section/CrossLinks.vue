@@ -1,7 +1,7 @@
 <template>
     <section class="flex flex-col justify-center items-center mb-10 text-gray-100">
         <h1 class="w-fit leading-10 text-2xl my-4 font-bold">{{ t("Core.Crosslinks.Title") }}</h1>
-        <div class="flex flex-wrap justify-center gap-10 w-fit">
+        <div class="grid px-3 mb-2 grid-cols-2 sm:grid-cols-3 lg:flex flex-wrap justify-center gap-10 w-fit">
             <SiteLink :href="runtimeConfig.public.app.googleplay" class="flex justify-center items-center h-20 relative"
                 target="_blank">
                 <div aria-hidden="true" class="absolute left-0 z-0 w-20 h-20 bg-gray-100 rounded-lg"></div>
