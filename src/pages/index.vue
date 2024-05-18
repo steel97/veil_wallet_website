@@ -67,7 +67,7 @@
 </template>
 
 <script setup lang="ts">
-const { isIos, isAndroid, isWindows, isMacOS, isDesktop } = useDevice();
+const { isIos, isAndroid, isWindows, isMacOS, isDesktop, } = useDevice();
 const { t } = useI18n();
 const runtimeConfig = useRuntimeConfig();
 const { getLatestRelease } = useGithubData();
