@@ -1,6 +1,7 @@
-# Nuxt 3 Minimal Starter
+# Veil - light wallet website
+Primary goal of this project is to provide for `iOS` users altstore compatible altsource with latest available [veil_wallet](https://github.com/steel97/veil_wallet).
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Example: [veilproject.org](https://veilproject.org)
 
 ## Setup
 
@@ -72,4 +73,4 @@ yarn preview
 bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+See [.env.example](/.env.example) for configuration example

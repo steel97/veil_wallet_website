@@ -1,0 +1,14 @@
+[Unit]
+Description=Veil Wallet website service
+
+[Service]
+User=walletwww
+KillMode=control-group
+WorkingDirectory=/home/walletwww/server/
+ExecStart=/home/walletwww/server/start.sh
+Restart=always
+TimeoutSec=300
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
