@@ -88,8 +88,8 @@ If there are no errors, move to next step.
 ```bash
 cd /home/walletwww/server/
 # download service example file
-wget -O veil-wallet-website.service https://raw.githubusercontent.com/steel97/Veil-Tools-Website/main/docs/systemd.example
-sudo systemctl link veil-wallet-website.service
+wget -O veil-wallet-website.service https://raw.githubusercontent.com/steel97/veil_wallet_website/master/docs/systemd.example
+sudo systemctl ./link veil-wallet-website.service
 sudo systemctl enable veil-wallet-website
 ```
 
