@@ -15,8 +15,8 @@
                 <SiteLink :href="runtimeConfig.public.github.site"
                     class="text-gray-100 hover:underline underline-offset-8 uppercase" target="_blank">{{
                 t("Core.Header.Github") }}</SiteLink>
-                <select v-model="localeModel"
-                    class="w-[100px] border row-start-1 col-start-1 rounded bg-sky-950 border-gray-500 text-gray-100 px-4 py-1 text-sm">
+                <select v-model="localeModel" :aria-label="t('Core.Header.Locale')"
+                    class="w-[110px] border row-start-1 col-start-1 rounded bg-sky-950 border-gray-500 text-gray-100 px-4 py-1 text-sm">
                     <option v-for="loca in getLocales()" :value="loca.code" :selected="locale == loca.code">{{ loca.name
                         }}</option>
                 </select>
@@ -34,7 +34,7 @@
                         {{
                 t("Core.Header.Download") }}</SiteLink>
                 </div>
-                <button class="container mr-2" ref="menu" @click="toggleMenu">
+                <button class="container mr-2" ref="menu" @click="toggleMenu" :aria-label="t('Core.Header.ToggleMenu')">
                     <div class="bar1 bg-gray-100"></div>
                     <div class="bar2 bg-gray-100"></div>
                     <div class="bar3 bg-gray-100"></div>
@@ -53,8 +53,8 @@
                 <SiteLink :href="runtimeConfig.public.github.site"
                     class="text-gray-100 hover:underline underline-offset-8 uppercase px-4" target="_blank">{{
                 t("Core.Header.Github") }}</SiteLink>
-                <select v-model="localeModel"
-                    class="w-[100px] border row-start-1 col-start-1 rounded bg-sky-950 border-gray-500 text-gray-100 px-4 py-1 text-sm mx-4">
+                <select v-model="localeModel" :aria-label="t('Core.Header.Locale')"
+                    class="w-[110px] border row-start-1 col-start-1 rounded bg-sky-950 border-gray-500 text-gray-100 px-4 py-1 text-sm mx-4">
                     <option v-for="loca in getLocales()" :value="loca.code" :selected="locale == loca.code">{{ loca.name
                         }}</option>
                 </select>

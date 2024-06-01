@@ -4,7 +4,9 @@ export default () => {
             "Donations": "Donations",
             "Website": "Project website",
             "Github": "Github",
-            "Download": "Download"
+            "Download": "Download",
+            "Locale": "Locale",
+            "ToggleMenu": "Toggle menu"
         },
         "Crosslinks": {
             "Title": "Useful links:"

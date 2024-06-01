@@ -56,7 +56,7 @@ nano start.sh
 Add this content to opened file, change variables if required:
 ```bash
 #!/bin/bash
-# listen address, highly recommended to change it to localhost and hide nuxt server behind nginx proxy for example
+# listen address, highly recommended to change it to 127.0.0.1 and hide nuxt server behind nginx proxy for example
 export HOST=0.0.0.0
 # listen port
 export PORT=3000

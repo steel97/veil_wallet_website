@@ -4,7 +4,9 @@ export default () => {
             "Donations": "Пожертвования",
             "Website": "Сайт проекта",
             "Github": "Github",
-            "Download": "Скачать"
+            "Download": "Скачать",
+            "Locale": "Язык",
+            "ToggleMenu": "Открыть меню"
         },
         "Crosslinks": {
             "Title": "Полезные ссылки:"
