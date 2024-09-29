@@ -1,4 +1,5 @@
 import { useGithubData } from "~/composables/GithubData";
+import { AltSourceDef } from "~/models/altstore/AltSourceDef";
 import type { GithubRelease } from "~/models/github/GithubReleases";
 
 export default defineEventHandler(async (event) => {
@@ -10,12 +11,19 @@ export default defineEventHandler(async (event) => {
 
     const altSource: AltSourceDef = {
         name: runtimeConfig.altsource.name,
-        identifier: runtimeConfig.altsource.identifier,
-        apiVersion: "v2",
+        subtitle: runtimeConfig.altsource.subtitle,
+        description: runtimeConfig.altsource.description,
+        iconURL: runtimeConfig.altsource.icon,
+        headerURL: runtimeConfig.altsource.header,
+        website: runtimeConfig.altsource.website,
+        tintColor: runtimeConfig.altsource.tint,
+        featuredApps: [
+            "org.veilproject.veilWallet"
+        ],
         apps: [
             {
                 name: "Veil - Privacy focused wallet",
-                bundleIdentifier: "org.veilproject.wallet",
+                bundleIdentifier: "org.veilproject.veilWallet",
                 developerName: "Ivan Yv",
                 subtitle: "Privacy focused VEIL coin crypto wallet",
                 category: "other",
@@ -60,35 +68,38 @@ export default defineEventHandler(async (event) => {
                 iconURL: "https://raw.githubusercontent.com/steel97/veil_wallet/main/metadata/en-US/images/icon.png",
                 versions: [
                     {
-                        version: release?.tag_name ?? "unknown",
+                        version: (release?.tag_name ?? "_unknown").substring(1),
                         date: /*release?.published_at ??*/ "2024-05-17T23:36:00+03:00",// TO-DO date converters
                         downloadURL: iosAsset?.browser_download_url ?? "unknown",
+                        size: iosAsset?.size ?? 0,
                         // TO-DO: get from repository (fastlane/triple-t format)
                         //localizedDescription: "",                        
                     }
                 ],
-                appPermissions: [
-                    {
-                        // TO-DO fix
-                        entitlements: [
-                            "keychain-access-groups"
-                        ],
-                        // https://github.com/steel97/veil_wallet/blob/main/ios/Runner/Info.plist
-                        privacy: {
-                            "NSFaceIDUsageDescription": "This app uses face id to secure user data",
-                            "NSCameraUsageDescription": "This app needs camera access to scan QR codes"
-                        }
+                appPermissions: {
+                    entitlements: [
+                        "keychain-access-groups",
+                        "aps-environment"
+                    ],
+                    // https://github.com/steel97/veil_wallet/blob/main/ios/Runner/Info.plist
+                    privacy: {
+                        "NSFaceIDUsageDescription": "This app uses face id to secure user data",
+                        "NSCameraUsageDescription": "This app needs camera access to scan QR codes"
                     }
-                ]
+                }
             }
         ],
         // TO-DO gather news somehow, from somewehere
         news: [
             {
                 title: "Veil source",
-                identifier: "news_1", // TO-DO, this should be guid?
+                identifier: "0434b8bd-f1ae-44c4-800b-eb0adca7da1d", // TO-DO, this should be guid?
                 caption: "Veil source is now available!",
-                date: "2024-05-17T23:00:10+03:00"
+                date: "2024-05-17T23:00:10+03:00",
+                tintColor: "#0282EA",
+                notify: false,
+                //imageURL: runtimeConfig.altsource.icon,
+                //appID: "org.veilproject.veilWallet",
             }
         ],
         userInfo: {}

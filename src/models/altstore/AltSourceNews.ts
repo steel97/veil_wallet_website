@@ -1,5 +1,5 @@
 // ref: https://faq.altstore.io/distribute-your-apps/make-a-source#news-items
-interface AltSourceNews {
+export interface AltSourceNews {
     // The title of your News item.
     title: string,
     // A unique value to distinguish this News item from others in your source.

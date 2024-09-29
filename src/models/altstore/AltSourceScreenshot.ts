@@ -1,5 +1,5 @@
 // ref: https://faq.altstore.io/distribute-your-apps/make-a-source#screenshots
-interface AltSourceScreenshot {
+export interface AltSourceScreenshot {
     // Link to a screenshot of your app.
     imageURL: string,
     // The pixel width of the image. If not provided, AltStore will assume a default size of 393 x 852 points (iPhone 15 in portrait mode). 

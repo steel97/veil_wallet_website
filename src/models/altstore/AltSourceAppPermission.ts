@@ -1,5 +1,5 @@
 // ref: https://faq.altstore.io/distribute-your-apps/make-a-source#app-permissions
-interface AltSourceAppPermission {
+export interface AltSourceAppPermission {
     /*
         These entitlements are required for all applications, so don't need to be listed:
         - com.app.developer.team-identifier

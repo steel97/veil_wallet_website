@@ -1,5 +1,11 @@
+import type { AltSourceAppPermission } from "~/models/altstore/AltSourceAppPermission";
+import type { AltSourceAppVersion } from "~/models/altstore/AltSourceAppVersion";
+import type { AltSourcePatreon } from "~/models/altstore/AltSourcePatreon";
+import type { AltSourceScreenshot } from "~/models/altstore/AltSourceScreenshot";
+import type { AltSourceUniversalScreenshots } from "~/models/altstore/AltSourceUniversalScreenshots";
+
 // ref: https://faq.altstore.io/distribute-your-apps/make-a-source#apps
-interface AltSourceApp {
+export interface AltSourceApp {
     // The name of your app as it will appear on its store page.
     name: string,
     // Your app's bundle identifier (CFBundleIdentifier). It is case sensitive and should match exactly what is in your Info.plist.
@@ -37,7 +43,7 @@ interface AltSourceApp {
     versions: AltSourceAppVersion[],
     // An object listing all entitlements and privacy permissions information used by the app. 
     // see https://faq.altstore.io/distribute-your-apps/make-a-source#app-permissions
-    appPermissions: AltSourceAppPermission[],
+    appPermissions: AltSourceAppPermission,
     // An object specifying the required pledge/tiers to download the app.  
     // https://faq.altstore.io/distribute-your-apps/make-a-source#patreon-apps
     patreon?: AltSourcePatreon

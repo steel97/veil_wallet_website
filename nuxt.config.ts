@@ -10,7 +10,12 @@ export default defineNuxtConfig({
     },
     altsource: {
       name: "",
-      identifier: ""
+      subtitle: "",
+      description: "",
+      icon: "",
+      header: "",
+      website: "",
+      tint: ""
     },
     public: {
       website: "",
@@ -32,13 +37,13 @@ export default defineNuxtConfig({
       {
         name: "English",
         code: "en",
-        iso: "en-US",
+        language: "en-US",
         file: "en.ts"
       },
       {
         name: "Русский",
         code: "ru",
-        iso: "ru-RU",
+        language: "ru-RU",
         file: "ru.ts"
       }
     ],

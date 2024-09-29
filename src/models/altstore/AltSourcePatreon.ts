@@ -1,5 +1,5 @@
 // ref: https://faq.altstore.io/distribute-your-apps/make-a-source#patreon-apps
-interface AltSourcePatreon {
+export interface AltSourcePatreon {
     /*
         The minimum pledge amount required for download. This can be used to limit downloads to higher tiers.
         This amount is assumed to be in USD by default. If using a non-USD currency for your campaign, you must specify it using the currency key below.

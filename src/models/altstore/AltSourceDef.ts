@@ -1,11 +1,10 @@
+import type { AltSourceApp } from "~/models/altstore/AltSourceApp";
+import type { AltSourceNews } from "~/models/altstore/AltSourceNews";
+
 // ref: https://faq.altstore.io/distribute-your-apps/make-a-source
-interface AltSourceDef {
+export interface AltSourceDef {
     // The name of your source as it will appear in AltStore.
     name: string,
-    // unk: example: com.quarksources.quantumsource
-    identifier: string,
-    // unk: api version, v2 currently
-    apiVersion: string,
     // A short, one-sentence description of your source. This will appear underneath the source's name on its About page.
     subtitle?: string,
     // A full-length description of your source. This can include any information you believe is relevant for your source, such as information about your apps or additional links.

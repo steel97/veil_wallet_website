@@ -1,5 +1,5 @@
 // ref: https://faq.altstore.io/distribute-your-apps/make-a-source#app-versions
-interface AltSourceAppVersion {
+export interface AltSourceAppVersion {
     // Your app's version number (CFBundleShortVersionString). It is case sensitive and should match exactly what is in your Info.plist.
     version: string,
     // The release date for this version. 
@@ -9,6 +9,7 @@ interface AltSourceAppVersion {
     localizedDescription?: string,
     // The URL where your .ipa is hosted.
     downloadURL: string,
+    size: number,
     // The minimum iOS version supported by this release. AltStore will hide any updates that are not supported by the user's device.
     minOSVersion?: string,
     // The maximum iOS version supported by this release (inclusive). AltStore will hide any updates that are not supported by the user's device.

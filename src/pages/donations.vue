@@ -15,14 +15,15 @@
                 <p class="leading-normal pb-4">
                     {{ t("Donations.Texts.Text4") }}
                 </p>
-                <p class="bg-gray-200 rounded-lg p-3 text-xs break-all">
+                <div class="bg-gray-200 rounded-lg p-3 text-xs break-all">
                     <span id="donations-address">{{ donationsAddress }}</span>
-                <div class="text-center">
-                    <SiteLink href="#" @click="copyAddress"
-                        class="underline break-all text-blue-500 font-bold underline-offset-4">{{ t("Donations.Copy") }}
-                    </SiteLink>
+                    <div class="text-center">
+                        <SiteLink href="#" @click="copyAddress"
+                            class="underline break-all text-blue-500 font-bold underline-offset-4">{{
+                            t("Donations.Copy") }}
+                        </SiteLink>
+                    </div>
                 </div>
-                </p>
                 <p class="py-3">
                     <SiteLink class="underline break-all text-blue-500 underline-offset-4"
                         :href="'veil:' + donationsAddress">

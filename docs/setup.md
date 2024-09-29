@@ -71,8 +71,13 @@ export NUXT_PUBLIC_GITHUB_WALLET=https://github.com/steel97/veil_wallet
 export NUXT_PUBLIC_APP_GOOGLEPLAY=https://play.google.com/store/apps/details?id=org.veilproject.wallet
 export NUXT_PUBLIC_APP_FDROID=https://f-droid.org/packages/org.veilproject.wallet/
 export NUXT_GITHUB_REPO=steel97/veil_wallet
-export NUXT_ALTSOURCE_NAME=Veil Project AltSource
-export NUXT_ALTSOURCE_IDENTIFIER=org.veilproject.sources
+export NUXT_ALTSOURCE_NAME="Veil Project AltSource"
+export NUXT_ALTSOURCE_SUBTITLE="Source for Veil apps on AltStore"
+export NUXT_ALTSOURCE_DESCRIPTION="The goal of this source is to provide access to Veil-Project apps on iOS"
+export NUXT_ALTSOURCE_ICON=https://veilproject.org/images/logo.png
+export NUXT_ALTSOURCE_HEADER=https://veil-project.com/dist/img/pattern.png
+export NUXT_ALTSOURCE_WEBSITE=https://veilproject.org
+export NUXT_ALTSOURCE_TINT=#FFFFFF
 
 node server/index.mjs
 ```
