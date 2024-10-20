@@ -1,3 +1,4 @@
+import { useCachableData } from "~/composables/CachableData";
 import { useGithubData } from "~/composables/GithubData";
 import { AltSourceDef } from "~/models/altstore/AltSourceDef";
 import type { GithubRelease } from "~/models/github/GithubReleases";
@@ -5,9 +6,19 @@ import type { GithubRelease } from "~/models/github/GithubReleases";
 export default defineEventHandler(async (event) => {
     const runtimeConfig = useRuntimeConfig();
     const { getLatestRelease, getAsset } = useGithubData();
+    const { getData } = useCachableData();
 
     const release = (await getLatestRelease()) as GithubRelease | null;
     const iosAsset = getAsset(release, ".ipa");
+
+    // get metadata
+    const nameMetaUrl = `https://raw.githubusercontent.com/${runtimeConfig.github.repo}/refs/heads/main/metadata/en-US/title.txt`;
+    const subtitleMetaUrl = `https://raw.githubusercontent.com/${runtimeConfig.github.repo}/refs/heads/main/metadata/en-US/short_description.txt`;
+    const descriptionMetaUrl = `https://raw.githubusercontent.com/${runtimeConfig.github.repo}/refs/heads/main/metadata/en-US/full_description.txt`;
+
+    const name = await getData<string>(nameMetaUrl);
+    const subtitle = await getData<string>(subtitleMetaUrl);
+    const description = await getData<string>(descriptionMetaUrl);
 
     const altSource: AltSourceDef = {
         name: runtimeConfig.altsource.name,
@@ -22,54 +33,20 @@ export default defineEventHandler(async (event) => {
         ],
         apps: [
             {
-                name: "Veil - Privacy focused wallet",
+                name: name,
                 bundleIdentifier: "org.veilproject.veilWallet",
                 developerName: "Ivan Yv",
-                subtitle: "Privacy focused VEIL coin crypto wallet",
+                subtitle: subtitle,
                 category: "other",
                 screenshots: [
 
                 ],
-                localizedDescription: `Veil - Privacy without compromise
-
-                Veil is creating an encrypted equivalent of the cash economy, where privacy is the most convenient choice. Learn more, download the wallet, and join the journey. 
-                
-                PRIVACY BY DEFAULT
-                
-                Privacy should not be optional. Veil aims to make full-time privacy the most convenient choice.
-                
-                INCENTIVIZED PARTICIPATION
-                
-                By holding Veil, our users not only contribute to broadly distributed network security, but earn staking rewards — anonymously!
-                
-                FAIR LAUNCH
-                
-                No ICO. No premine. Veil's blockchain is secured via Proof-of-Work and Proof-of-Stake in order to combine both security and fair distribution.
-                
-                USER-FOCUSED
-                
-                In a digital cash society, participation extends to everybody, not just those who read user manuals. Veil aims to be one of the most user-friendly wallets in crypto.
-                
-                SELF-SUSTAINING
-                
-                The Veil network includes built-in self-funding for project development, operations, customer support, and ongoing research and development.
-                
-                FUTURE-SAFE
-                
-                Veil will continue to push the limits of cryptography and blockchain technology through Veil Labs, an entity dedicated to R&D and partnerships with leading academic institutions.
-                
-                
-                Project website:
-                https://veil-project.com
-                Source code:
-                https://github.com/steel97/veil_wallet
-                Discord
-                https://discord.veil-project.com`,
-                iconURL: "https://raw.githubusercontent.com/steel97/veil_wallet/main/metadata/en-US/images/icon.png",
+                localizedDescription: description,
+                iconURL: `https://raw.githubusercontent.com/${runtimeConfig.github.repo}/main/metadata/en-US/images/icon.png`,
                 versions: [
                     {
                         version: (release?.tag_name ?? "_unknown").substring(1),
-                        date: /*release?.published_at ??*/ "2024-05-17T23:36:00+03:00",// TO-DO date converters
+                        date: release?.published_at ?? "2024-05-17T23:36:00+03:00",
                         downloadURL: iosAsset?.browser_download_url ?? "unknown",
                         size: iosAsset?.size ?? 0,
                         // TO-DO: get from repository (fastlane/triple-t format)
