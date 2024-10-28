@@ -29,5 +29,5 @@ const props = defineProps<{
     release: GithubRelease | null
 }>();
 
-const asset = computed(() => getAsset(props.release, ".macos-universal.zip"));
+const asset = computed(() => getAsset(props.release, ".macos-universal.dmg"));
 </script>

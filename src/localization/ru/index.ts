@@ -46,7 +46,7 @@ export default () => {
                 "MacOS": {
                     "Header": "Скачать для MacOS",
                     "Text": "Сборка кошелька универсальна, подходит для устройств x86 и arm (Apple M)",
-                    "ActionDownload": "Скачать .zip",
+                    "ActionDownload": "Скачать .dmg",
                 },
                 "Linux": {
                     "Header": "Скачать для Linux",

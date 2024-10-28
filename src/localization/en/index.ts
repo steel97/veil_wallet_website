@@ -46,7 +46,7 @@ export default () => {
                 "MacOS": {
                     "Header": "Download for MacOS",
                     "Text": "The wallet build is universal, suitable for both x86 and arm devices (Apple M)",
-                    "ActionDownload": "Download .zip",
+                    "ActionDownload": "Download .dmg",
                 },
                 "Linux": {
                     "Header": "Download for Linux",
