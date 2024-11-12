@@ -11,10 +11,10 @@
                 </SiteLink>
                 <SiteLink :href="runtimeConfig.public.website"
                     class="text-gray-100 hover:underline underline-offset-8 uppercase" target="_blank">{{
-                t("Core.Header.Website") }}</SiteLink>
+                        t("Core.Header.Website") }}</SiteLink>
                 <SiteLink :href="runtimeConfig.public.github.site"
                     class="text-gray-100 hover:underline underline-offset-8 uppercase" target="_blank">{{
-                t("Core.Header.Github") }}</SiteLink>
+                        t("Core.Header.Github") }}</SiteLink>
                 <select v-model="localeModel" :aria-label="t('Core.Header.Locale')"
                     class="w-[110px] border row-start-1 col-start-1 rounded bg-sky-950 border-gray-500 text-gray-100 px-4 py-1 text-sm">
                     <option v-for="loca in getLocales()" :value="loca.code" :selected="locale == loca.code">{{ loca.name
@@ -24,7 +24,7 @@
                     <SiteLink :to="localePath('/') + '#downloads'"
                         class="block text-center rounded-full transition-colors bg-blue-600 hover:bg-blue-500 px-6 py-2 text-gray-100 text-md uppercase min-w-[145px]">
                         {{
-                t("Core.Header.Download") }}</SiteLink>
+                            t("Core.Header.Download") }}</SiteLink>
                 </div>
             </nav>
             <nav class="flex lg:hidden">
@@ -32,7 +32,7 @@
                     <SiteLink :to="localePath('/') + '#downloads'"
                         class="block text-center rounded-full transition-colors bg-blue-600 hover:bg-blue-500 px-6 py-2 text-gray-100 text-md uppercase min-w-[145px]">
                         {{
-                t("Core.Header.Download") }}</SiteLink>
+                            t("Core.Header.Download") }}</SiteLink>
                 </div>
                 <button class="container mr-2" ref="menu" @click="toggleMenu" :aria-label="t('Core.Header.ToggleMenu')">
                     <div class="bar1 bg-gray-100"></div>
@@ -49,10 +49,10 @@
                 </SiteLink>
                 <SiteLink :href="runtimeConfig.public.website"
                     class="text-gray-100 hover:underline underline-offset-8 uppercase px-4" target="_blank">{{
-                t("Core.Header.Website") }}</SiteLink>
+                        t("Core.Header.Website") }}</SiteLink>
                 <SiteLink :href="runtimeConfig.public.github.site"
                     class="text-gray-100 hover:underline underline-offset-8 uppercase px-4" target="_blank">{{
-                t("Core.Header.Github") }}</SiteLink>
+                        t("Core.Header.Github") }}</SiteLink>
                 <select v-model="localeModel" :aria-label="t('Core.Header.Locale')"
                     class="w-[110px] border row-start-1 col-start-1 rounded bg-sky-950 border-gray-500 text-gray-100 px-4 py-1 text-sm mx-4">
                     <option v-for="loca in getLocales()" :value="loca.code" :selected="locale == loca.code">{{ loca.name
@@ -64,8 +64,6 @@
 </template>
 
 <script setup lang="ts">
-import type { LocaleObject } from "@nuxtjs/i18n";
-
 const localePath = useLocalePath();
 const { t, locales, locale } = useI18n();
 const switchLocalePath = useSwitchLocalePath();
@@ -93,10 +91,9 @@ const recalculateMenuSize = () => {
 const getLocales = () => {
     const localesRet: Array<ILocale> = [];
     locales.value.forEach(locale => {
-        const lang = locale as LocaleObject;
         const link: ILocale = {
-            code: lang.code,
-            name: lang.name ?? ""
+            code: locale.code,
+            name: locale.name ?? ""
         };
         localesRet.push(link);
     });

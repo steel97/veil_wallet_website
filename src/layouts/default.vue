@@ -19,8 +19,8 @@
 
 <script setup>
 const head = useLocaleHead({
-    addDirAttribute: true,
-    identifierAttribute: "id",
-    addSeoAttributes: true
+    dir: true,
+    key: "id",
+    seo: true
 });
 </script>
