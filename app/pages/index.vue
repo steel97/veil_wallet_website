@@ -40,10 +40,7 @@
           <DownloadGeneral v-else />
         </div>
         <div class="flex justify-center pb-1">
-          <NuxtLink
-            href="#downloads"
-            class="underline underline-offset-4 hover:text-blue-600 transition-colors"
-          >
+          <NuxtLink href="#downloads" class="underline underline-offset-4 hover:text-blue-600 transition-colors">
             {{
               t("Index.Downloads.OtherPlatforms") }}
           </NuxtLink>
@@ -76,13 +73,13 @@
         }) }}
       </p>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <SectionDownloadIos :release="releaseData" />
-        <SectionDownloadAndroid :release="releaseData" />
+        <SectionDownloadIOS :release="releaseData ?? null" />
+        <SectionDownloadAndroid :release="releaseData ?? null" />
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-        <SectionDownloadWindows :release="releaseData" />
-        <SectionDownloadMacOS :release="releaseData" />
-        <SectionDownloadLinux :release="releaseData" />
+        <SectionDownloadWindows :release="releaseData ?? null" />
+        <SectionDownloadMacOS :release="releaseData ?? null" />
+        <SectionDownloadLinux :release="releaseData ?? null" />
       </div>
     </section>
   </div>
@@ -119,16 +116,16 @@ useHead({
 }*/
 
 @keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
+  }
 
-    50% {
-        background-position: 100% 50%;
-    }
+  50% {
+    background-position: 100% 50%;
+  }
 
-    100% {
-        background-position: 0% 50%;
-    }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 </style>

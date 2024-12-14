@@ -2,8 +2,10 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   compatibilityDate: "2024-12-14",
+  future: {
+    compatibilityVersion: 4,
+  },
   css: ["~/assets/css/tailwind.css", "~/assets/css/common.css"],
-  srcDir: "src/",
   runtimeConfig: {
     github: {
       repo: "",

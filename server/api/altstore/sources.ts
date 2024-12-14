@@ -1,7 +1,7 @@
 import type { AltSourceDef } from "~/models/altstore/AltSourceDef";
 import type { GithubRelease } from "~/models/github/GithubReleases";
-import { useCachableData } from "~/composables/CachableData";
-import { useGithubData } from "~/composables/GithubData";
+import { useCachableData } from "~~/app/composables/CachableData";
+import { useGithubData } from "~~/app/composables/GithubData";
 
 export default defineEventHandler(async (event) => {
   const runtimeConfig = useRuntimeConfig();

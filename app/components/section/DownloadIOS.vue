@@ -10,10 +10,7 @@
       <div class="flex-grow">
         <div>
           <div class="flex items-center relative">
-            <img
-              src="/images/icons/services/altstore.png" width="43" alt="AltStore logo"
-              class="relative z-10"
-            >
+            <img src="/images/icons/services/altstore.png" width="43" alt="AltStore logo" class="relative z-10">
             <div aria-hidden="true" class="relative left-[-4px] h-[43px] bg-sky-950 w-[20px] z-0 h-[43px]">
             </div>
             <NuxtLink
