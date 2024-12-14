@@ -9,40 +9,40 @@
                     <div class="flex items-center relative">
                         <img src="/images/icons/services/google-play.svg" width="39" alt="Google Play logo"
                             class="relative z-10">
-                        <SiteLink :href="runtimeConfig.public.app.googleplay"
+                        <NuxtLink :href="runtimeConfig.public.app.googleplay"
                             class="h-[43px] ml-3 relative z-10 block leading-normal rounded-r-lg transition-colors bg-sky-950 hover:bg-sky-900 px-4 py-2 text-gray-100 text-md uppercase flex-grow max-w-[250px] text-center">
                             {{ t("Index.Downloads.Sections.Android.ActionDownloadGooglePlay") }}
-                        </SiteLink>
+                        </NuxtLink>
                     </div>
                 </div>
                 <div class="mt-2">
                     <div class="flex items-center relative">
                         <img src="/images/icons/services/fdroid.png" width="43" alt="F-Droid logo"
                             class="relative z-10">
-                        <SiteLink :href="runtimeConfig.public.app.fdroid"
+                        <NuxtLink :href="runtimeConfig.public.app.fdroid"
                             class="h-[43px] ml-2 relative z-10 block leading-normal rounded-r-lg transition-colors bg-sky-950 hover:bg-sky-900 px-4 py-2 text-gray-100 text-md uppercase flex-grow max-w-[250px] text-center">
                             {{ t("Index.Downloads.Sections.Android.ActionDownloadFDroid") }}
-                        </SiteLink>
+                        </NuxtLink>
                     </div>
                 </div>
                 <p class="mt-4">
                     <span class="block">{{ t("Index.Downloads.Sections.Android.TextDownloadAPK") }}</span>
-                    <SiteLink :href="asset_universal?.browser_download_url"
+                    <NuxtLink :href="asset_universal?.browser_download_url"
                         class="underline underline-offset-4 hover:text-blue-600 transition-colors">
                         universal
-                    </SiteLink> /
-                    <SiteLink :href="asset_arm64_v8a?.browser_download_url"
+                    </NuxtLink> /
+                    <NuxtLink :href="asset_arm64_v8a?.browser_download_url"
                         class="underline underline-offset-4 hover:text-blue-600 transition-colors">
                         arm64-v8a
-                    </SiteLink> /
-                    <SiteLink :href="asset_armeabi_v7a?.browser_download_url"
+                    </NuxtLink> /
+                    <NuxtLink :href="asset_armeabi_v7a?.browser_download_url"
                         class="underline underline-offset-4 hover:text-blue-600 transition-colors">
                         armeabi-v7a
-                    </SiteLink> /
-                    <SiteLink :href="asset_x86_64?.browser_download_url"
+                    </NuxtLink> /
+                    <NuxtLink :href="asset_x86_64?.browser_download_url"
                         class="underline underline-offset-4 hover:text-blue-600 transition-colors">
                         x86_64
-                    </SiteLink>
+                    </NuxtLink>
                 </p>
             </div>
             <img src="/images/qr/google-play.svg" alt="AltStore QR" width="128"

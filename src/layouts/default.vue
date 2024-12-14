@@ -21,6 +21,7 @@
 const head = useLocaleHead({
     dir: true,
     key: "id",
-    seo: true
+    seo: true,
+    lang: true
 });
 </script>

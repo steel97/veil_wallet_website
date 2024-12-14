@@ -18,17 +18,17 @@
                 <div class="bg-gray-200 rounded-lg p-3 text-xs break-all">
                     <span id="donations-address">{{ donationsAddress }}</span>
                     <div class="text-center">
-                        <SiteLink href="#" @click="copyAddress"
+                        <NuxtLink href="#" @click="copyAddress"
                             class="underline break-all text-blue-500 font-bold underline-offset-4">{{
-                            t("Donations.Copy") }}
-                        </SiteLink>
+                                t("Donations.Copy") }}
+                        </NuxtLink>
                     </div>
                 </div>
                 <p class="py-3">
-                    <SiteLink class="underline break-all text-blue-500 underline-offset-4"
+                    <NuxtLink class="underline break-all text-blue-500 underline-offset-4"
                         :href="'veil:' + donationsAddress">
                         veil:{{ donationsAddress }}
-                    </SiteLink>
+                    </NuxtLink>
                 </p>
             </section>
             <figure class="hidden lg:block">

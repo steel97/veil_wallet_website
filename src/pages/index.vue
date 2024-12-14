@@ -23,23 +23,23 @@
                         <figcaption class="lg:text-lg pt-3">{{ t("Index.Advantages.Secure") }}</figcaption>
                     </figure>
                 </div>
-                <p class="flex justify-center py-3">
+                <div class="flex justify-center py-3">
                     <DownloadIos v-if="isIos" />
                     <DownloadAndroid v-else-if="isAndroid" />
                     <DownloadWindows v-else-if="isWindows" />
                     <DownloadMacOS v-else-if="isMacOS" />
                     <DownloadLinux v-else-if="isDesktop" />
                     <DownloadGeneral v-else />
-                </p>
-                <p class="flex justify-center pb-1">
-                    <SiteLink href="#downloads"
+                </div>
+                <div class="flex justify-center pb-1">
+                    <NuxtLink href="#downloads"
                         class="underline underline-offset-4 hover:text-blue-600 transition-colors">{{
-                    t("Index.Downloads.OtherPlatforms") }}</SiteLink>
+                            t("Index.Downloads.OtherPlatforms") }}</NuxtLink>
                     <span>&nbsp;/&nbsp;</span>
-                    <SiteLink :href="runtimeConfig.public.github.wallet"
+                    <NuxtLink :href="runtimeConfig.public.github.wallet"
                         class="underline underline-offset-4 hover:text-blue-600 transition-colors" target="_blank">{{
-                    t("Index.Downloads.SourceCode") }}</SiteLink>
-                </p>
+                            t("Index.Downloads.SourceCode") }}</NuxtLink>
+                </div>
             </section>
             <figure class="hidden lg:block">
                 <img src="/images/promo-2.png"
@@ -50,18 +50,18 @@
         <section class="max-w-7xl w-full mx-auto relative px-2" id="downloads">
             <h1 class="leading-10 text-3xl text-gray-100">{{ t("Index.Downloads.Header") }}</h1>
             <p class="leading-10 text-sm pb-4 pl-1 text-gray-100">{{ t("Index.Downloads.ActualVersion", {
-                    version:
-                        releaseData?.tag_name
-                }) }}</p>
-            <p class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                version:
+                    releaseData?.tag_name
+            }) }}</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <SectionDownloadIos :release="releaseData" />
                 <SectionDownloadAndroid :release="releaseData" />
-            </p>
-            <p class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
                 <SectionDownloadWindows :release="releaseData" />
                 <SectionDownloadMacOS :release="releaseData" />
                 <SectionDownloadLinux :release="releaseData" />
-            </p>
+            </div>
         </section>
     </div>
 </template>
@@ -81,8 +81,6 @@ defineSoftwareApp({
     aggregateRating: {
         ratingValue: "5.0",
         ratingCount: 0,
-    },
-    offers: {
     },
 });
 

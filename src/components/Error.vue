@@ -7,14 +7,14 @@
                     {{ t("Errors." + errLocale + ".Text") }}
                 </p>
                 <p class="leading-normal pb-4 text-center">
-                    <SiteLink :to="localePath('/')" @click="clearError" class="
+                    <NuxtLinkLocale to="/" @click="clearError" class="
                                   uppercase
                                   text-center text-blue-500
                                   underline
                                   underline-offset-4
                                 ">
                         {{ t("Errors.ToHome") }}
-                    </SiteLink>
+                    </NuxtLinkLocale>
                 </p>
             </section>
             <figure>

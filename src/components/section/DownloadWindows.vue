@@ -9,10 +9,10 @@
         <div>
             <section class="flex items-center justify-center relative mt-6">
                 <img src="/images/icons/windows-11.png" width="43" alt="Windows logo" class="relative z-10">
-                <SiteLink :href="asset?.browser_download_url"
+                <NuxtLink :href="asset?.browser_download_url"
                     class="h-[41px] relative z-10 block leading-normal rounded-r-lg transition-colors bg-sky-950 hover:bg-sky-900 px-4 py-2 text-gray-100 text-md uppercase flex-grow max-w-[250px] text-center">
                     {{ t("Index.Downloads.Sections.Windows.ActionDownload") }}
-                </SiteLink>
+                </NuxtLink>
             </section>
             <p class="text-rose-600 text-sm mt-3">{{ t("Index.Downloads.AutoUpdatesNotice") }}</p>
         </div>
@@ -23,7 +23,6 @@
 import type { GithubRelease } from "~/models/github/GithubReleases";
 
 const { t } = useI18n();
-const runtimeConfig = useRuntimeConfig();
 const { getAsset } = useGithubData();
 const props = defineProps<{
     release: GithubRelease | null
