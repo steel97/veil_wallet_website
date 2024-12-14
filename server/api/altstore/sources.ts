@@ -1,5 +1,4 @@
 import type { AltSourceDef } from "~/models/altstore/AltSourceDef";
-import type { GithubRelease } from "~/models/github/GithubReleases";
 import { useCachableData } from "~~/app/composables/CachableData";
 import { useGithubData } from "~~/app/composables/GithubData";
 
@@ -8,7 +7,7 @@ export default defineEventHandler(async (event) => {
   const { getLatestRelease, getAsset } = useGithubData();
   const { getData } = useCachableData();
 
-  const release = (await getLatestRelease()) as GithubRelease | null;
+  const release = await getLatestRelease();
   const iosAsset = getAsset(release, ".ipa");
 
   // get metadata
