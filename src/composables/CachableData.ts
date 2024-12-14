@@ -16,4 +16,4 @@ export const useCachableData = () => {
   };
 
   return { getData };
-}
+};

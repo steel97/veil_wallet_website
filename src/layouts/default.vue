@@ -1,27 +1,25 @@
 <template>
-    <Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir">
-
+  <Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir">
     <Head>
-        <template v-for="link in head.link" :key="link.id">
-            <Link :id="link.id" :rel="link.rel" :href="link.href" :hreflang="link.hreflang" />
-        </template>
-        <template v-for="meta in head.meta" :key="meta.id">
-            <Meta :id="meta.id" :property="meta.property" :content="meta.content" />
-        </template>
+      <template v-for="link in head.link" :key="link.id">
+        <Link :id="link.id" :rel="link.rel" :href="link.href" :hreflang="link.hreflang" />
+      </template>
+      <template v-for="meta in head.meta" :key="meta.id">
+        <Meta :id="meta.id" :property="meta.property" :content="meta.content" />
+      </template>
     </Head>
 
     <Body class="bg-gray-300">
-        <slot />
+      <slot />
     </Body>
-
-    </Html>
+  </Html>
 </template>
 
 <script setup>
 const head = useLocaleHead({
-    dir: true,
-    key: "id",
-    seo: true,
-    lang: true
+  dir: true,
+  key: "id",
+  seo: true,
+  lang: true,
 });
 </script>

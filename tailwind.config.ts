@@ -8,18 +8,17 @@ export default {
     "./src/plugins/**/*.{js,ts}",
     "./nuxt.config.{js,ts}",
     "./src/app.vue",
-    "./src/error.vue"
+    "./src/error.vue",
   ],
   theme: {
     extend: {
       fontFamily: {
-        "noto": ["Noto Sans", "sans-serif"],
-      }
-    }
+        noto: ["Noto Sans", "sans-serif"],
+      },
+    },
   },
   variants: {
     extend: {},
   },
   plugins: [],
-}
-
+};

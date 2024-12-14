@@ -1,26 +1,26 @@
 <template>
-    <NuxtLayout>
-        <AppHeader />
-        <div class="main-wrap" aria-hidden="true"></div>
-        <div class="wrap">
-            <main>
-                <Error :error="error" />
-            </main>
-            <div class="max-w-7xl w-full mx-auto my-4 text-gray-800">
-                <!-- links -->
-                <SectionCrossLinks />
-            </div>
-        </div>
-        <AppFooter />
-    </NuxtLayout>
+  <NuxtLayout>
+    <AppHeader />
+    <div class="main-wrap" aria-hidden="true"></div>
+    <div class="wrap">
+      <main>
+        <Error :error="error" />
+      </main>
+      <div class="max-w-7xl w-full mx-auto my-4 text-gray-800">
+        <!-- links -->
+        <SectionCrossLinks />
+      </div>
+    </div>
+    <AppFooter />
+  </NuxtLayout>
 </template>
 
 <script setup lang="ts">
-import "toastify-js/src/toastify.css";
 import type { NuxtError } from "#app";
+import "toastify-js/src/toastify.css";
 
 const props = defineProps({
-    error: Object as () => NuxtError
+  error: Object as () => NuxtError,
 });
 </script>
 

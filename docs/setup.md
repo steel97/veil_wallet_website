@@ -37,7 +37,7 @@ sudo mkdir /home/walletwww/server/
 TO-DO
 ```
 ```bash
-sudo wget 
+sudo wget
 sudo tar -xzf  -C /home/walletwww/server/
 ```
 

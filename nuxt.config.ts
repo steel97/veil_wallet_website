@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   srcDir: "src/",
   runtimeConfig: {
     github: {
-      repo: ""
+      repo: "",
     },
     altsource: {
       name: "",
@@ -15,22 +15,22 @@ export default defineNuxtConfig({
       icon: "",
       header: "",
       website: "",
-      tint: ""
+      tint: "",
     },
     public: {
       website: "",
       github: {
         site: "",
-        wallet: ""
+        wallet: "",
       },
       site: {
-        url: "http://localhost:3000"
+        url: "http://localhost:3000",
       },
       app: {
         googleplay: "",
-        fdroid: ""
-      }
-    }
+        fdroid: "",
+      },
+    },
   },
   i18n: {
     locales: [
@@ -38,14 +38,14 @@ export default defineNuxtConfig({
         name: "English",
         code: "en",
         language: "en-US",
-        file: "en.ts"
+        file: "en.ts",
       },
       {
         name: "Русский",
         code: "ru",
         language: "ru-RU",
-        file: "ru.ts"
-      }
+        file: "ru.ts",
+      },
     ],
     defaultLocale: "en",
     lazy: true,
@@ -56,32 +56,32 @@ export default defineNuxtConfig({
       useCookie: true,
       cookieKey: "locale",
       redirectOn: "all",
-      alwaysRedirect: true
+      alwaysRedirect: true,
     },
-    baseUrl: process.env.NUXT_I18N_BASE_URL || "https://veilproject.org"
+    baseUrl: process.env.NUXT_I18N_BASE_URL || "https://veilproject.org",
   },
   app: {
     pageTransition: { name: "page", mode: "out-in" },
     head: {
       templateParams: {
-        separator: "-"
+        separator: "-",
       },
-      titleTemplate: "%siteName %separator %s"
-    }
+      titleTemplate: "%siteName %separator %s",
+    },
   },
   seo: {
-    redirectToCanonicalSiteUrl: process.env.NODE_ENV !== "development"
+    redirectToCanonicalSiteUrl: process.env.NODE_ENV !== "development",
   },
   site: {
-    url: process.env.NUXT_PUBLIC_SITE_URL || "https://veilproject.org"
+    url: process.env.NUXT_PUBLIC_SITE_URL || "https://veilproject.org",
   },
   schemaOrg: {
     identity: {
       type: "Organization",
       name: "Veil Project",
       url: "https://veil-project.com",
-      logo: (process.env.NUXT_PUBLIC_SITE_URL || "https://veilproject.org") + "/icon-192x192-light.png"
-    }
+      logo: `${process.env.NUXT_PUBLIC_SITE_URL || "https://veilproject.org"}/icon-192x192-light.png`,
+    },
   },
 
   postcss: {
@@ -90,5 +90,5 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ["@nuxtjs/device", "@nuxtjs/i18n", "@nuxtjs/seo", "nuxt-multi-cache"]
-})
+  modules: ["@nuxtjs/device", "@nuxtjs/i18n", "@nuxtjs/seo", "nuxt-multi-cache", "@nuxtjs/eslint-module"],
+});
