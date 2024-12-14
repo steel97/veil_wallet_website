@@ -85,12 +85,12 @@ export default defineNuxtConfig({
       logo: `${process.env.NUXT_PUBLIC_SITE_URL || "https://veilproject.org"}/icon-192x192-light.png`,
     },
   },
-
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
-  },
-  modules: ["@nuxtjs/device", "@nuxtjs/i18n", "@nuxtjs/seo", "nuxt-multi-cache", "@nuxtjs/eslint-module"],
+  modules: [
+    "@nuxtjs/device",
+    "@nuxtjs/i18n",
+    "@nuxtjs/seo",
+    "nuxt-multi-cache",
+    "@nuxtjs/eslint-module",
+    "@nuxtjs/tailwindcss",
+  ],
 });
