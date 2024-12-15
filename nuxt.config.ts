@@ -34,6 +34,11 @@ export default defineNuxtConfig({
       },
     },
   },
+  multiCache: {
+    data: {
+      enabled: true,
+    },
+  },
   i18n: {
     locales: [
       {
