@@ -8,6 +8,9 @@ export default defineEventHandler(async (event) => {
   }
 
   const data = await $fetch<PriceApi>("https://veil.tools/api/getprice");
-  addToCache(data, undefined, 1800);
+  if (data.status) {
+    addToCache(data, undefined, 1800);
+  }
+
   return data;
 });
