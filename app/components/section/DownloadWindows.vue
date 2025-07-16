@@ -34,6 +34,6 @@ const props = defineProps<{
   release: GithubRelease | null;
 }>();
 const { t } = useI18n();
-const { getAsset } = useGithubData();
+const { getAsset } = useGithubData(null);
 const asset = computed(() => getAsset(props.release, ".win-x86_64.zip"));
 </script>

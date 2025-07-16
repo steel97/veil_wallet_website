@@ -54,6 +54,9 @@ export default defineNuxtConfig({
         file: "ru.ts",
       },
     ],
+    bundle: {
+      optimizeTranslationDirective: false,
+    },
     defaultLocale: "en",
     lazy: true,
     restructureDir: false,

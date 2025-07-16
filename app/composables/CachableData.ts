@@ -1,8 +1,6 @@
-import { useDataCache } from "#nuxt-multi-cache/composables";
-
-export const useCachableData = () => {
+export const useCachableData = (event: any) => {
   const getData = async <T>(url: string) => {
-    const { value, addToCache } = await useDataCache<T>("github_releases");
+    const { value, addToCache } = await useDataCache<T>("github_releases", event);
     if (value) {
       return value;
     }

@@ -57,6 +57,6 @@ const props = defineProps<{
 }>();
 const { t } = useI18n();
 const runtimeConfig = useRuntimeConfig();
-const { getAsset } = useGithubData();
+const { getAsset } = useGithubData(null);
 const asset = computed(() => getAsset(props.release, ".ipa"));
 </script>

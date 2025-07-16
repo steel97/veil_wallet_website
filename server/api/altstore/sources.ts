@@ -4,8 +4,8 @@ import { useGithubData } from "~~/app/composables/GithubData";
 
 export default defineEventHandler(async (event) => {
   const runtimeConfig = useRuntimeConfig();
-  const { getLatestRelease, getAsset } = useGithubData();
-  const { getData } = useCachableData();
+  const { getLatestRelease, getAsset } = useGithubData(event);
+  const { getData } = useCachableData(event);
 
   const release = await getLatestRelease();
   const iosAsset = getAsset(release, ".ipa");

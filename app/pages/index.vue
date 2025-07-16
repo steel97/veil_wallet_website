@@ -89,7 +89,7 @@
 const { isIos, isAndroid, isWindows, isMacOS, isDesktop } = useDevice();
 const { t } = useI18n();
 const runtimeConfig = useRuntimeConfig();
-const { getLatestRelease } = useGithubData();
+const { getLatestRelease } = useGithubData(null);
 
 const releaseData = ref(await getLatestRelease());
 

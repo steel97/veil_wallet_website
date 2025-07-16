@@ -1,5 +1,4 @@
 import type { PriceApi } from "~/models/PriceApi";
-import { useDataCache } from "#nuxt-multi-cache/composables";
 
 export default defineEventHandler(async (event) => {
   const { value, addToCache } = await useDataCache<PriceApi>("price", event);

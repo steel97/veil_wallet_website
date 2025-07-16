@@ -1,10 +1,9 @@
 import type { GithubRelease } from "~/models/github/GithubReleases";
-import { useDataCache } from "#nuxt-multi-cache/composables";
 
-export const useGithubData = () => {
+export const useGithubData = (event: any) => {
   const runtimeConfig = useRuntimeConfig();
   const getGithubReleases = async () => {
-    const { value, addToCache } = await useDataCache<GithubRelease[]>("github_releases");
+    const { value, addToCache } = await useDataCache<GithubRelease[]>("github_releases", event);
     if (value) {
       return value;
     }

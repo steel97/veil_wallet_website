@@ -1,5 +1,4 @@
 import type { GithubRelease } from "~/models/github/GithubReleases";
-import { useDataCache } from "#nuxt-multi-cache/composables";
 
 export default defineEventHandler(async (event) => {
   const { value, addToCache } = await useDataCache<GithubRelease[]>("github_releases", event);

@@ -82,7 +82,7 @@ const props = defineProps<{
 }>();
 const { t } = useI18n();
 const runtimeConfig = useRuntimeConfig();
-const { getAsset } = useGithubData();
+const { getAsset } = useGithubData(null);
 const asset_universal = computed(() => getAsset(props.release, ".android.apk"));
 const asset_arm64_v8a = computed(() => getAsset(props.release, ".android-arm64-v8a.apk"));
 const asset_armeabi_v7a = computed(() => getAsset(props.release, ".android-armeabi-v7a.apk"));
