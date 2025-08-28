@@ -58,7 +58,7 @@ useHead({
   title: t(`Errors.${errLocale.value}.Title`),
 });
 
-if (process.server) {
+if (import.meta.server) {
   const nuxtApp = useNuxtApp();
   // eslint-ignore-next-line
   if (nuxtApp.ssrContext != null) {
