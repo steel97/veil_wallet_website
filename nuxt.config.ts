@@ -1,9 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  compatibilityDate: "2025-07-15",
+  compatibilityDate: "2026-03-15",
   future: {
-    compatibilityVersion: 4,
+    compatibilityVersion: 5,
   },
   css: ["~/assets/css/tailwind.css", "~/assets/css/common.css"],
   runtimeConfig: {
